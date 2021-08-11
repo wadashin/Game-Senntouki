@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    float y = 0;
+    //float y = 0;
     float z = 0;
     bool a;
 
@@ -24,20 +24,17 @@ public class MoveLeft : MonoBehaviour
 
             if (!a)
             {
-
-                Debug.Log(1);
-                y -= 1;
-
-
-                z -= 0.2f;
+                //y -= 1;
+                z -= 0.5f;
 
                 a = true;
             }
-            y = y - (y + 1);
+            //y = y - (y + 1);
         }
         else
         {
             a = false;
+            z = 0;
         }
 
     }

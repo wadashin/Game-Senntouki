@@ -2,40 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveRight : MonoBehaviour
+public class MoveRight1 : MonoBehaviour
 {
     float z = 0;
-    bool a;
 
     // Start is called before the first frame update
     private void Update()
     {
         transform.position += new Vector3(0f, 0f, 0f);
         SousaRight();
+
     }
 
     public void SousaRight()
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-
-            transform.Rotate(new Vector3(0, z, 0));
-
-            if (!a)
+            var n = this.transform.localEulerAngles.z;
+            if (n < 70 || n == 0)
             {
-
-                z += 0.5f;
-
-                a = true;
+                transform.Rotate(new Vector3(0, 0, z));
+                z += 1f;
+                z = z - (z - 1f);
+                //Debug.Log(n);
             }
-
-        }
-        else
-        {
-            a = false;
-            z = 0;
         }
 
     }
-
 }
+
