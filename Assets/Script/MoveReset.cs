@@ -20,14 +20,9 @@ public class MoveReset : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftControl))
         {
             
-            if (z > 181 && z < 360)
-            {
-                Debug.Log(z);
-                //transform.Rotate
-                myTransform.Rotate(0, 0, z);
-                z += 1;
-                z = z - (z - 1);
-            }
+            z = 0;
+            Debug.Log(z);
+            myTransform.Rotate(new Vector3(0, 0, z));
         }
     }
 }
