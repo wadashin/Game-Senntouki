@@ -19,7 +19,6 @@ public class CollisionAudio : MonoBehaviour
     {
         if (other.gameObject.tag == "Teki")
         {
-            Debug.Log(1);
             m_Audio.gameObject.SetActive(true);
         }
         else

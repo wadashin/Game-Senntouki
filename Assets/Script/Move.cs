@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] float m_Speed = 5;
+    [SerializeField] float m_Speed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, -m_Speed);
-        gameObject.transform.position += velocity;// * Time.deltaTime;
+            Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, -m_Speed);
+            gameObject.transform.position += velocity;
     }
 }

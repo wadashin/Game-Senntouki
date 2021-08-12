@@ -19,13 +19,26 @@ public class MoveLeft1 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             var n = this.transform.localEulerAngles.z;
-            if (n > 300 || n == 0 || n < 0.9f)
+            if (n > 300 || n == 0 || n < 70)
             {
                 transform.Rotate(new Vector3(0, 0, z));
                 z -= 1f;
                 z = z - (z + 1f);
             }
         }
+        //else
+        //{
+            
+        //    var n = this.transform.localEulerAngles.z;
+            
+        //    if (n < 360 && n > 290)
+        //    {
+        //        Debug.Log(n);
+        //        transform.Rotate(new Vector3(0, 0, z));
+        //        z += 1f;
+        //        z = z - (z - 1);
+        //    }
+        //}
         
     }
 }

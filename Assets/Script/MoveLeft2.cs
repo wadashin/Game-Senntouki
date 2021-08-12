@@ -21,10 +21,6 @@ public class MoveLeft2 : MonoBehaviour
                 z = 0;
             }
 
-            //if (n < 359.5f)
-            //{
-            //    z = 0;
-            //}
         }
     }
 }

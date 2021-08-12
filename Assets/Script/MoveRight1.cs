@@ -19,12 +19,11 @@ public class MoveRight1 : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             var n = this.transform.localEulerAngles.z;
-            if (n < 70 || n == 0)
+            if (n < 60 || n == 0 || n > 290 )
             {
                 transform.Rotate(new Vector3(0, 0, z));
                 z += 1f;
                 z = z - (z - 1f);
-                //Debug.Log(n);
             }
         }
 
