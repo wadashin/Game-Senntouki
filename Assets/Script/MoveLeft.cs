@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     float z = 0;
+    float x = 0;
     bool a;
 
     // Start is called before the first frame update
@@ -40,9 +41,9 @@ public class MoveLeft : MonoBehaviour
             
             if (n > 300 || n == 0 || n < 180)
             {
-                myTransform.Rotate(0f, 0f, z);
-                z -= 1f;
-                z = z - (z + 1f);
+                myTransform.Rotate(0f, 0f, x);
+                x -= 1f;
+                x = x - (x + 1f);
             }
         }
         else

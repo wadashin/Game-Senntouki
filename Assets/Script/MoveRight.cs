@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveRight : MonoBehaviour
 {
     float z = 0;
+    float x = 0;
     bool a;
 
     // Start is called before the first frame update
@@ -39,9 +40,9 @@ public class MoveRight : MonoBehaviour
             
             if (n < 60 || n == 0 || n > 181)
             {
-                myTransform.Rotate(0f, 0f, z);
-                z += 1f;
-                z = z - (z - 1f);
+                myTransform.Rotate(0f, 0f, x);
+                x += 1f;
+                x = x - (x - 1f);
             }
         }
         else

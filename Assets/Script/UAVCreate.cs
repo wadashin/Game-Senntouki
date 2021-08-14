@@ -5,24 +5,28 @@ using UnityEngine;
 public class UAVCreate : MonoBehaviour
 {
     [SerializeField] GameObject UAV;
-    // Update is called once per frame
+    int t;
+    int a;
     private void Start()
     {
-        Create();
+        a = Random.Range(250,300);
     }
 
     void Update()
     {
-
-        
+        t++;
+        if(t % a == 0)
+        {
+            Create();
+        }
     }
     public void Create()
     {
-    Vector3 play1 = this.gameObject.transform.position;
-    Quaternion play2 = this.gameObject.transform.rotation;
+    Vector3 player1 = this.gameObject.transform.position;
+    Quaternion player2 = this.gameObject.transform.rotation;
 
-        Debug.Log("play: " + play1);
+        Debug.Log("play: " + player1);
 
-    Instantiate(UAV, play1, play2);
+    Instantiate(UAV, player1, player2);
     }
 }
