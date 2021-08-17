@@ -27,7 +27,7 @@ public class Cursor : MonoBehaviour
         Vector3 posB = camera.transform.position;
         float dis = Vector3.Distance(posA, posB);
         Debug.Log(dis);
-        if (dis < 800)
+        if (dis < 1200)
         {
             m_Cursor.gameObject.SetActive(false);
             m_CursorRed.gameObject.SetActive(true);
